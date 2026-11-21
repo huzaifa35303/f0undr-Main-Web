@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/'],
       },
     ],
-    sitemap: 'https://f0undr.agency/sitemap.xml',
+    sitemap: 'https://f0undrteam.site/sitemap.xml',
   };
 }
