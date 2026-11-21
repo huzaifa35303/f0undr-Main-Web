@@ -1,0 +1,117 @@
+/* Hallmark stamp: f0undr-dark-obsidian | critique: strict-tokens, no-slop | waivers: none */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Hallmark Floor Rule 1: Every colour and font goes through tokens */
+  --color-bg: #090a0f;
+  --color-bg-subtle: #11131a;
+  --color-bg-card: rgba(18, 21, 30, 0.75);
+  --color-bg-hover: rgba(30, 35, 50, 0.85);
+
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.16);
+
+  --color-text-primary: #f3f4f6;
+  --color-text-secondary: #9ca3af;
+  --color-text-muted: #6b7280;
+
+  --color-accent: #00f0ff;
+  --color-accent-subtle: rgba(0, 240, 255, 0.12);
+  --color-accent-glow: rgba(0, 240, 255, 0.25);
+
+  --color-tag-bg: rgba(255, 255, 255, 0.05);
+  --color-tag-text: #e5e7eb;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Hallmark Floor Rule 4: overflow-x: clip on both html and body. Never hidden, never 100vw. */
+html,
+body {
+  overflow-x: clip;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hallmark Floor Rule 6: Focus-visible instantly visible */
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Hallmark Floor Rule 2: Never transition: all. Never animate width, height, top or left */
+.transition-standard {
+  transition-property: color, background-color, border-color, opacity, transform;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Glassmorphism token utility */
+.glass-panel {
+  background: var(--color-bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.glass-panel:hover {
+  border-color: var(--color-border-strong);
+}
+
+/* Liquid glass dynamic utilities */
+.liquid-glass {
+  background: rgba(14, 17, 24, 0.68);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  box-shadow: 
+    0 20px 40px -15px rgba(0, 0, 0, 0.7),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.22),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.liquid-glass-scrolled {
+  background: rgba(9, 11, 16, 0.85);
+  backdrop-filter: blur(34px) saturate(220%);
+  -webkit-backdrop-filter: blur(34px) saturate(220%);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.85),
+    0 0 25px -4px rgba(0, 240, 255, 0.18),
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+}
+
+.liquid-pill {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0.5px rgba(255, 255, 255, 0.15);
+}
+
+.liquid-pill-active {
+  background: rgba(0, 240, 255, 0.12);
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 
+    0 0 14px rgba(0, 240, 255, 0.22),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  color: var(--color-accent);
+}
+
+/* Hallmark Floor Rule 7: reduced-motion fallback */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
