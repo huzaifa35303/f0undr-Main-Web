@@ -1,14 +1,68 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Menu, X, ArrowUpRight, Sparkles } from 'lucide-react';
+import { Menu, X, ArrowUpRight, ChevronDown, Globe, Bot, Shield, Video, Layers } from 'lucide-react';
+
+interface NetworkSite {
+  title: string;
+  category: string;
+  description: string;
+  href: string;
+  isExternal: boolean;
+  status: string;
+}
+
+const NETWORK_SITES: NetworkSite[] = [
+  {
+    title: 'f0undr AI Platform',
+    category: 'autonomous intelligence',
+    description: 'Autonomous LLM workflows, custom agent swarms & MCP tooling.',
+    href: 'https://ai.f0undrteam.site/',
+    isExternal: true,
+    status: 'online',
+  },
+  {
+    title: 'f0undr Creative Studio',
+    category: 'commercial media',
+    description: '4K cinema video ads, 3D motion graphics & poster campaigns.',
+    href: '#work',
+    isExternal: false,
+    status: 'active',
+  },
+  {
+    title: 'Cipher7 Vault',
+    category: 'security & desktop',
+    description: 'Ultra-private desktop & mobile encrypted communications suite.',
+    href: '#capabilities',
+    isExternal: false,
+    status: 'deployed',
+  },
+  {
+    title: 'f0undr Game Labs',
+    category: 'gaming & simulations',
+    description: 'Real-time 2D/3D game mechanics, volumetric shaders & engines.',
+    href: '#capabilities',
+    isExternal: false,
+    status: 'active',
+  },
+  {
+    title: 'f0undr REA Security',
+    category: 'deep tech',
+    description: 'Binary reverse engineering, protocol audits & memory analysis.',
+    href: '#capabilities',
+    isExternal: false,
+    status: 'verified',
+  },
+];
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [networkDropdownOpen, setNetworkDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeSection, setActiveSection] = useState('');
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const navLinks = [
     { label: 'capabilities', href: '#capabilities' },
@@ -23,14 +77,12 @@ export default function Navbar() {
       const scrollY = window.scrollY;
       setIsScrolled(scrollY > 20);
 
-      // Compute page reading progress (0 - 100%)
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       if (docHeight > 0) {
         const progress = Math.min(100, Math.max(0, (scrollY / docHeight) * 100));
         setScrollProgress(progress);
       }
 
-      // Detect active section
       const sections = ['capabilities', 'agents', 'work', 'architecture', 'calculator'];
       const scrollPos = scrollY + 200;
       for (const section of sections) {
@@ -49,14 +101,24 @@ export default function Navbar() {
       }
     };
 
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setNetworkDropdownOpen(false);
+      }
+    };
+
     window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('mousedown', handleClickOutside);
     handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-standard">
-      <div 
+      <div
         className={`max-w-container mx-auto px-4 sm:px-6 transition-all duration-300 ${
           isScrolled ? 'py-2.5 sm:py-3' : 'py-4 sm:py-5'
         }`}
@@ -66,7 +128,7 @@ export default function Navbar() {
             isScrolled ? 'liquid-glass-scrolled' : 'liquid-glass'
           }`}
         >
-          {/* Micro Liquid Progress Line at the bottom of the navbar */}
+          {/* Micro Liquid Progress Line */}
           <div className="absolute bottom-0 left-6 right-6 h-[1.5px] rounded-full overflow-hidden bg-white/5 pointer-events-none">
             <div
               className="h-full bg-gradient-to-r from-accent via-cyan-300 to-accent transition-all duration-150 ease-out shadow-[0_0_8px_#00f0ff]"
@@ -109,19 +171,68 @@ export default function Navbar() {
 
           {/* Desktop Nav Actions */}
           <div className="hidden md:flex items-center gap-2.5">
-            {/* Live AI Platform Liquid Button */}
-            <a
-              href="https://ai.f0undrteam.site/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative px-4 py-2 rounded-full text-xs font-mono text-accent border border-accent/40 bg-accent/10 hover:bg-accent hover:text-bg transition-all duration-300 shadow-[0_0_16px_rgba(0,240,255,0.15)] hover:shadow-[0_0_24px_rgba(0,240,255,0.4)] flex items-center gap-2"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-accent group-hover:bg-bg animate-pulse" />
-              <span className="font-semibold">f0undr ai</span>
-              <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
+            {/* Our Websites & Network Dropdown */}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                type="button"
+                onClick={() => setNetworkDropdownOpen(!networkDropdownOpen)}
+                className={`px-3.5 py-2 rounded-full text-xs font-mono transition-standard flex items-center gap-1.5 border ${
+                  networkDropdownOpen
+                    ? 'border-accent bg-accent-subtle/30 text-accent'
+                    : 'border-border-subtle bg-white/5 text-text-secondary hover:text-text-primary hover:border-border-strong'
+                }`}
+                aria-expanded={networkDropdownOpen}
+                aria-haspopup="true"
+              >
+                <Globe className="w-3.5 h-3.5 text-accent" />
+                <span>our network</span>
+                <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${networkDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
 
-            {/* Start Project Liquid Gloss Button */}
+              {/* Liquid Glass Dropdown Menu */}
+              {networkDropdownOpen && (
+                <div className="absolute right-0 top-full mt-2 w-80 liquid-glass-scrolled rounded-2xl p-3 border-accent/30 shadow-2xl z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                  <div className="px-3 py-2 border-b border-white/10 mb-2">
+                    <span className="text-[10px] font-mono text-accent uppercase tracking-wider block">
+                      f0undr web ecosystem
+                    </span>
+                    <span className="text-[11px] text-text-muted">
+                      Active platforms, apps &amp; systems
+                    </span>
+                  </div>
+
+                  <div className="space-y-1">
+                    {NETWORK_SITES.map((site) => (
+                      <a
+                        key={site.title}
+                        href={site.href}
+                        target={site.isExternal ? '_blank' : undefined}
+                        rel={site.isExternal ? 'noopener noreferrer' : undefined}
+                        onClick={() => setNetworkDropdownOpen(false)}
+                        className="p-2.5 rounded-xl hover:bg-white/5 transition-standard flex items-start justify-between group block"
+                      >
+                        <div>
+                          <div className="flex items-center gap-1.5">
+                            <span className="text-xs font-medium text-text-primary group-hover:text-accent transition-standard">
+                              {site.title}
+                            </span>
+                            {site.isExternal && <ArrowUpRight className="w-3 h-3 text-text-muted group-hover:text-accent" />}
+                          </div>
+                          <span className="text-[10px] text-text-muted block mt-0.5 line-clamp-1">
+                            {site.description}
+                          </span>
+                        </div>
+                        <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-text-secondary uppercase">
+                          {site.status}
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Start Project Liquid Button */}
             <a
               href="#contact"
               className="px-5 py-2 rounded-full text-xs font-medium bg-text-primary text-bg hover:bg-accent hover:text-bg transition-all duration-300 shadow-md hover:shadow-[0_0_20px_rgba(0,240,255,0.3)] flex items-center gap-1.5 font-mono"
@@ -164,19 +275,29 @@ export default function Navbar() {
               );
             })}
 
-            <div className="pt-3 border-t border-white/10 flex flex-col gap-2 mt-1">
-              <a
-                href="https://ai.f0undrteam.site/"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center px-4 py-2.5 rounded-2xl text-xs font-mono text-accent border border-accent/40 bg-accent-subtle/30 hover:bg-accent hover:text-bg transition-standard flex items-center justify-center gap-2"
-              >
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>launch f0undr ai platform</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </a>
+            {/* Mobile Network Links */}
+            <div className="pt-3 border-t border-white/10 mt-1">
+              <span className="text-[10px] font-mono text-accent uppercase tracking-wider block mb-2 px-2">
+                our web platforms &amp; sites
+              </span>
+              <div className="space-y-1">
+                {NETWORK_SITES.map((site) => (
+                  <a
+                    key={site.title}
+                    href={site.href}
+                    target={site.isExternal ? '_blank' : undefined}
+                    rel={site.isExternal ? 'noopener noreferrer' : undefined}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="p-2 rounded-xl hover:bg-white/5 transition-standard flex items-center justify-between text-xs text-text-secondary"
+                  >
+                    <span>{site.title}</span>
+                    {site.isExternal ? <ArrowUpRight className="w-3 h-3 text-accent" /> : <span className="text-[9px] font-mono uppercase text-text-muted">{site.status}</span>}
+                  </a>
+                ))}
+              </div>
+            </div>
 
+            <div className="pt-3 border-t border-white/10 flex flex-col gap-2 mt-1">
               <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}

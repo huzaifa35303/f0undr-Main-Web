@@ -144,6 +144,9 @@ export default function Footer() {
             <Link href="/refund" className="hover:text-accent transition-standard">
               refund policy
             </Link>
+            <Link href="/cookie-policy" className="hover:text-accent transition-standard">
+              cookie policy
+            </Link>
             <a href="mailto:huzaifa.f0undr@gmail.com?subject=Data%20Deletion%20Request" className="hover:text-accent transition-standard">
               request data deletion
             </a>

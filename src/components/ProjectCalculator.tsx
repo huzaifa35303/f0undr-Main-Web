@@ -195,6 +195,10 @@ export default function ProjectCalculator() {
               <span>request proposal for this scope</span>
               <ArrowRight className="w-4 h-4" />
             </a>
+
+            <div className="mt-4 pt-3 border-t border-border-subtle/60 text-[11px] text-text-muted leading-relaxed font-mono">
+              <span className="text-accent font-semibold">Zero hidden fees:</span> Milestone-based pricing with transparent deliverable gates. Third-party cloud compute and API tokens are billed directly at cost to your own accounts with zero markup.
+            </div>
           </div>
 
         </div>

@@ -13,19 +13,13 @@ export default function Hero() {
       </div>
 
       <div className="max-w-container mx-auto w-full flex flex-col items-center text-center">
-        {/* Status indicator linking to live AI platform */}
-        <a
-          href="https://ai.f0undrteam.site/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/40 bg-accent-subtle/20 text-accent mb-8 hover:bg-accent hover:text-bg transition-standard group"
-        >
-          <span className="w-2 h-2 rounded-full bg-accent animate-ping" />
-          <span className="text-xs font-mono lowercase">
-            live platform online // ai.f0undrteam.site
+        {/* Status indicator */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border-subtle bg-bg-card mb-8">
+          <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+          <span className="text-xs font-mono text-text-secondary lowercase">
+            engineering, media &amp; multi-platform systems
           </span>
-          <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-standard" />
-        </a>
+        </div>
 
         {/* Hero headline - under 80 words total for screen */}
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-text-primary max-w-4xl leading-[1.08] mb-6">
@@ -40,27 +34,24 @@ export default function Hero() {
         {/* Hero actions */}
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a
-            href="https://ai.f0undrteam.site/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3.5 rounded-full text-sm font-medium border border-accent/60 bg-accent-subtle/30 text-accent hover:bg-accent hover:text-bg transition-standard flex items-center gap-2"
-          >
-            <Sparkles className="w-4 h-4" />
-            <span>launch f0undr ai</span>
-            <ArrowUpRight className="w-4 h-4" />
-          </a>
-          <a
             href="#contact"
-            className="px-6 py-3.5 rounded-full text-sm font-medium bg-text-primary text-bg hover:bg-accent hover:text-bg transition-standard flex items-center gap-2"
+            className="px-6 py-3.5 rounded-full text-sm font-medium bg-text-primary text-bg hover:bg-accent hover:text-bg transition-standard flex items-center gap-2 font-mono"
           >
             <span>initiate project</span>
             <ArrowUpRight className="w-4 h-4" />
           </a>
           <a
             href="#capabilities"
-            className="px-6 py-3.5 rounded-full text-sm font-medium border border-border-subtle bg-bg-card text-text-primary hover:border-border-strong hover:bg-bg-hover transition-standard"
+            className="px-6 py-3.5 rounded-full text-sm font-medium border border-border-subtle bg-bg-card text-text-primary hover:border-border-strong hover:bg-bg-hover transition-standard font-mono"
           >
             view capabilities
+          </a>
+          <a
+            href="#work"
+            className="px-6 py-3.5 rounded-full text-sm font-medium border border-accent/40 bg-accent-subtle/20 text-accent hover:bg-accent hover:text-bg transition-standard flex items-center gap-1.5 font-mono"
+          >
+            <span>selected works</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         </div>
 

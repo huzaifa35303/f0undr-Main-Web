@@ -44,9 +44,13 @@ export default function CookieConsent() {
               Privacy &amp; Data Transparency
             </h4>
             <p className="text-xs text-text-secondary mt-1 leading-relaxed">
-              We only use necessary cookies to ensure system stability and performance. No invasive tracking, no third-party data selling, and zero dark patterns.{' '}
+              We only use necessary cookies to ensure system stability and performance. No invasive tracking, no third-party data selling, and zero dark patterns. Read our{' '}
+              <Link href="/cookie-policy" className="text-accent underline hover:text-text-primary transition-standard">
+                Cookie Policy
+              </Link>{' '}
+              &amp;{' '}
               <Link href="/privacy" className="text-accent underline hover:text-text-primary transition-standard">
-                Learn more
+                Privacy Policy
               </Link>.
             </p>
 

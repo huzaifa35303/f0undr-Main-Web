@@ -83,6 +83,60 @@ export default function TermsPage() {
             </p>
           </section>
 
+          {/* Media & Stock Asset Licensing */}
+          <section className="glass-panel p-6 rounded-2xl border-border-subtle">
+            <h2 className="text-lg font-bold text-text-primary mb-3 flex items-center gap-2">
+              <Award className="w-4 h-4 text-accent" />
+              <span>4. Stock &amp; Media Asset Licensing</span>
+            </h2>
+            <p className="text-xs leading-relaxed mb-2">
+              All commercial video footage, audio tracks, 3D assets, and photographic elements integrated into client deliverables are either:
+            </p>
+            <ul className="list-disc list-inside space-y-1 text-xs text-text-primary font-mono mb-2">
+              <li>Custom created and rendered from original source files by f0undr Studio</li>
+              <li>Fully cleared and commercially licensed under global royalty-free commercial distribution rights</li>
+            </ul>
+            <p className="text-xs leading-relaxed">
+              Clients receive all corresponding commercial clearance documentation upon final milestone delivery.
+            </p>
+          </section>
+
+          {/* Age Requirement & Child Privacy */}
+          <section className="glass-panel p-6 rounded-2xl border-border-subtle">
+            <h2 className="text-lg font-bold text-text-primary mb-3">
+              5. Eligibility &amp; Age Restrictions (18+)
+            </h2>
+            <p className="text-xs leading-relaxed">
+              f0undr services and project intake platforms are strictly intended for legal entities and individuals who have reached the age of majority (18 years or older). We do not knowingly solicit, enter into contracts with, or collect personal information from individuals under the age of 18 (complying with COPPA and international child protection regulations).
+            </p>
+          </section>
+
+          {/* Unsubscribe & Communications */}
+          <section className="glass-panel p-6 rounded-2xl border-border-subtle">
+            <h2 className="text-lg font-bold text-text-primary mb-3">
+              6. Communications &amp; Unsubscribe Rights
+            </h2>
+            <p className="text-xs leading-relaxed mb-3">
+              We send direct communications only in response to explicit project inquiries or active contracts. We never send unsolicited mass marketing emails.
+            </p>
+            <p className="text-xs leading-relaxed">
+              You can instantly opt out or unsubscribe from any communication by clicking the unsubscribe link in our correspondence or emailing <a href="mailto:huzaifa.f0undr@gmail.com?subject=Unsubscribe" className="text-accent underline font-mono">huzaifa.f0undr@gmail.com</a> with the subject line <strong>&quot;Unsubscribe&quot;</strong>.
+            </p>
+          </section>
+
+          {/* Business Details */}
+          <section className="glass-panel p-6 rounded-2xl border-border-subtle">
+            <h2 className="text-lg font-bold text-text-primary mb-3">
+              7. Business Details &amp; Jurisdiction
+            </h2>
+            <div className="text-xs font-mono space-y-1 text-text-secondary">
+              <p><strong className="text-text-primary">Operating Agency:</strong> f0undr Team &amp; Agency</p>
+              <p><strong className="text-text-primary">Contact Email:</strong> <a href="mailto:huzaifa.f0undr@gmail.com" className="text-accent underline">huzaifa.f0undr@gmail.com</a></p>
+              <p><strong className="text-text-primary">Primary Domain:</strong> <a href="https://ai.f0undrteam.site/" target="_blank" rel="noopener noreferrer" className="text-accent underline">f0undrteam.site</a></p>
+              <p><strong className="text-text-primary">Governing Law:</strong> Standard international commercial contracts, milestone arbitration protocols.</p>
+            </div>
+          </section>
+
           {/* Contact */}
           <div className="pt-4 text-xs font-mono text-text-muted">
             For contractual inquiries and terms verification, contact us at <a href="mailto:huzaifa.f0undr@gmail.com" className="text-accent underline font-mono">huzaifa.f0undr@gmail.com</a>.
