@@ -32,6 +32,17 @@ export default function Footer() {
             <ul className="space-y-2 text-xs text-text-secondary">
               <li>
                 <a 
+                  href="https://order.f0undrteam.site/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-accent hover:underline inline-flex items-center gap-1 font-mono"
+                >
+                  <span>f0undr order (live)</span>
+                  <span>↗</span>
+                </a>
+              </li>
+              <li>
+                <a 
                   href="https://ai.f0undrteam.site/" 
                   target="_blank" 
                   rel="noopener noreferrer" 

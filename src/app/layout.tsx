@@ -119,6 +119,7 @@ export default function RootLayout({
         image: 'https://f0undrteam.site/og-image.svg',
         email: 'huzaifa.f0undr@gmail.com',
         sameAs: [
+          'https://order.f0undrteam.site/',
           'https://ai.f0undrteam.site/',
           'https://github.com/huzaifa35303/f0undr-Main-Web',
         ],
@@ -131,6 +132,14 @@ export default function RootLayout({
           {
             '@type': 'SiteNavigationElement',
             position: 1,
+            name: 'f0undr Order Portal',
+            description:
+              'Commission bespoke software, cross-platform apps, 2D/3D games, cinematic videos, and autonomous AI systems.',
+            url: 'https://order.f0undrteam.site/',
+          },
+          {
+            '@type': 'SiteNavigationElement',
+            position: 2,
             name: 'Capabilities & Services',
             description:
               'Full-spectrum engineering: 4K cinema video ads, commercial poster suites, custom software, and cross-platform apps.',

@@ -15,6 +15,14 @@ interface NetworkSite {
 
 const NETWORK_SITES: NetworkSite[] = [
   {
+    title: 'f0undr Order Portal',
+    category: 'bespoke commissions',
+    description: 'Commission custom websites, mobile apps, games, cinematic videos & AI systems.',
+    href: 'https://order.f0undrteam.site/',
+    isExternal: true,
+    status: 'live',
+  },
+  {
     title: 'f0undr AI Platform',
     category: 'autonomous intelligence',
     description: 'Autonomous LLM workflows, custom agent swarms & MCP tooling.',
