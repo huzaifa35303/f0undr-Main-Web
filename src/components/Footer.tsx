@@ -157,6 +157,25 @@ export default function Footer() {
                   huzaifa.f0undr@gmail.com
                 </a>
               </li>
+              <li className="pt-1 flex items-center gap-3">
+                <a
+                  href="https://www.instagram.com/huzaifa.f0undr/?hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-standard font-mono"
+                >
+                  instagram ↗
+                </a>
+                <span className="text-border-strong">/</span>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61596779771244"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-standard font-mono"
+                >
+                  facebook ↗
+                </a>
+              </li>
             </ul>
           </div>
 

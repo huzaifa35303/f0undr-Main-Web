@@ -126,6 +126,8 @@ export default function RootLayout({
         sameAs: [
           'https://order.f0undrteam.site/',
           'https://ai.f0undrteam.site/',
+          'https://www.instagram.com/huzaifa.f0undr/?hl=en',
+          'https://www.facebook.com/profile.php?id=61596779771244',
           'https://github.com/huzaifa35303/f0undr-Main-Web',
         ],
       },

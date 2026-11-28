@@ -23,8 +23,28 @@ export default function ContactSection() {
             Initiate your project or reach us directly.
           </h2>
           <p className="text-text-secondary mt-4 text-base leading-relaxed">
-            All project commissions, bespoke engineering, and creative orders are processed through our dedicated Order Portal. For direct discussions, reach us via WhatsApp, Discord, or direct phone call.
+            All project commissions, bespoke engineering, and creative orders are processed through our dedicated Order Portal. For direct discussions, reach us via WhatsApp, Discord, Email, or direct phone call.
           </p>
+          <div className="flex flex-wrap items-center gap-3 mt-5">
+            <a
+              href="https://www.instagram.com/huzaifa.f0undr/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3.5 py-1.5 rounded-full text-xs font-mono border border-border-subtle bg-bg-card text-text-secondary hover:text-accent hover:border-accent/40 transition-standard inline-flex items-center gap-1.5"
+            >
+              <span>Instagram (@huzaifa.f0undr)</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61596779771244"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3.5 py-1.5 rounded-full text-xs font-mono border border-border-subtle bg-bg-card text-text-secondary hover:text-accent hover:border-accent/40 transition-standard inline-flex items-center gap-1.5"
+            >
+              <span>Facebook Official</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
