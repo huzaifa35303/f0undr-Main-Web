@@ -132,43 +132,42 @@ export default function Navbar() {
         }`}
       >
         <div
-          className={`relative rounded-full px-5 sm:px-7 py-2.5 sm:py-3 flex items-center justify-between transition-all duration-300 ${
+          className={`relative rounded-full px-4 sm:px-6 py-2 flex items-center justify-between transition-all duration-300 ${
             isScrolled ? 'liquid-glass-scrolled' : 'liquid-glass'
           }`}
         >
           {/* Micro Liquid Progress Line */}
-          <div className="absolute bottom-0 left-6 right-6 h-[1.5px] rounded-full overflow-hidden bg-white/5 pointer-events-none">
+          <div className="absolute bottom-0 left-8 right-8 h-[1.5px] rounded-full overflow-hidden bg-white/[0.04] pointer-events-none">
             <div
-              className="h-full bg-gradient-to-r from-accent via-cyan-300 to-accent transition-all duration-150 ease-out shadow-[0_0_8px_#00f0ff]"
+              className="h-full bg-gradient-to-r from-accent/80 via-cyan-200 to-accent transition-all duration-150 ease-out shadow-[0_0_10px_#00f0ff]"
               style={{ width: `${scrollProgress}%` }}
             />
           </div>
 
           {/* Liquid Rim Specular Top Highlight */}
-          <div className="absolute top-0 left-10 right-10 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
+          <div className="absolute top-0 left-12 right-12 h-[1px] bg-gradient-to-r from-transparent via-white/40 to-transparent pointer-events-none" />
 
-          {/* Brand Logo with Liquid Glow */}
+          {/* Brand Logo */}
           <Link
             href="/"
-            className="flex items-center text-text-primary text-xl font-bold tracking-tight hover:opacity-90 transition-standard group relative"
+            className="flex items-center text-text-primary text-lg sm:text-xl font-bold tracking-tight hover:opacity-90 transition-standard group pl-1"
           >
-            <span className="font-mono text-accent drop-shadow-[0_0_12px_rgba(0,240,255,0.4)]">f0</span>
-            <span className="text-text-primary group-hover:text-white transition-standard">undr</span>
-            <span className="ml-2 w-1.5 h-1.5 rounded-full bg-accent animate-ping hidden sm:inline-block" />
+            <span className="font-mono text-accent drop-shadow-[0_0_14px_rgba(0,240,255,0.45)]">f0</span>
+            <span className="text-white/95 group-hover:text-white transition-standard">undr</span>
           </Link>
 
-          {/* Desktop Nav - Dynamic Liquid Pill Container */}
-          <nav className="hidden lg:flex items-center gap-1.5 px-3 py-1 rounded-full liquid-pill border-white/5">
+          {/* Desktop Nav - Seamless Fluid Links */}
+          <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href;
               return (
                 <a
                   key={link.label}
                   href={link.href}
-                  className={`px-3.5 py-1.5 rounded-full text-xs font-mono lowercase transition-all duration-200 relative ${
+                  className={`px-3.5 py-1.5 rounded-full text-[13px] font-medium tracking-tight transition-all duration-200 relative ${
                     isActive
-                      ? 'text-accent bg-accent-subtle/50 font-semibold shadow-[0_0_12px_rgba(0,240,255,0.25)] border border-accent/40'
-                      : 'text-text-secondary hover:text-text-primary hover:bg-white/5'
+                      ? 'liquid-pill-active font-semibold'
+                      : 'text-white/75 hover:text-white hover:bg-white/[0.08] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.18)]'
                   }`}
                 >
                   {link.label}
@@ -178,38 +177,38 @@ export default function Navbar() {
           </nav>
 
           {/* Desktop Nav Actions */}
-          <div className="hidden md:flex items-center gap-2.5">
+          <div className="hidden md:flex items-center gap-2">
             {/* Our Websites & Network Dropdown */}
             <div className="relative" ref={dropdownRef}>
               <button
                 type="button"
                 onClick={() => setNetworkDropdownOpen(!networkDropdownOpen)}
-                className={`px-3.5 py-2 rounded-full text-xs font-mono transition-standard flex items-center gap-1.5 border ${
+                className={`px-3.5 py-1.5 rounded-full text-[13px] font-medium tracking-tight transition-all duration-200 flex items-center gap-1.5 ${
                   networkDropdownOpen
-                    ? 'border-accent bg-accent-subtle/30 text-accent'
-                    : 'border-border-subtle bg-white/5 text-text-secondary hover:text-text-primary hover:border-border-strong'
+                    ? 'liquid-pill-active'
+                    : 'liquid-pill text-white/85 hover:text-white hover:bg-white/[0.1]'
                 }`}
                 aria-expanded={networkDropdownOpen}
                 aria-haspopup="true"
               >
                 <Globe className="w-3.5 h-3.5 text-accent" />
                 <span>our network</span>
-                <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${networkDropdownOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-3 h-3 opacity-70 transition-transform duration-200 ${networkDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
 
               {/* Liquid Glass Dropdown Menu */}
               {networkDropdownOpen && (
-                <div className="absolute right-0 top-full mt-2 w-80 liquid-glass-scrolled rounded-2xl p-3 border-accent/30 shadow-2xl z-50 animate-in fade-in slide-in-from-top-2 duration-150">
-                  <div className="px-3 py-2 border-b border-white/10 mb-2">
+                <div className="absolute right-0 top-full mt-3 w-80 liquid-glass-scrolled rounded-2xl p-2.5 shadow-2xl z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                  <div className="px-3 py-2 border-b border-white/10 mb-1.5">
                     <span className="text-[10px] font-mono text-accent uppercase tracking-wider block">
                       f0undr web ecosystem
                     </span>
-                    <span className="text-[11px] text-text-muted">
+                    <span className="text-[11px] text-white/60">
                       Active platforms, apps &amp; systems
                     </span>
                   </div>
 
-                  <div className="space-y-1">
+                  <div className="space-y-0.5">
                     {NETWORK_SITES.map((site) => (
                       <a
                         key={site.title}
@@ -217,20 +216,20 @@ export default function Navbar() {
                         target={site.isExternal ? '_blank' : undefined}
                         rel={site.isExternal ? 'noopener noreferrer' : undefined}
                         onClick={() => setNetworkDropdownOpen(false)}
-                        className="p-2.5 rounded-xl hover:bg-white/5 transition-standard flex items-start justify-between group block"
+                        className="p-2.5 rounded-xl hover:bg-white/[0.08] transition-standard flex items-start justify-between group block"
                       >
                         <div>
                           <div className="flex items-center gap-1.5">
-                            <span className="text-xs font-medium text-text-primary group-hover:text-accent transition-standard">
+                            <span className="text-xs font-semibold text-white/95 group-hover:text-accent transition-standard">
                               {site.title}
                             </span>
-                            {site.isExternal && <ArrowUpRight className="w-3 h-3 text-text-muted group-hover:text-accent" />}
+                            {site.isExternal && <ArrowUpRight className="w-3 h-3 text-white/40 group-hover:text-accent" />}
                           </div>
-                          <span className="text-[10px] text-text-muted block mt-0.5 line-clamp-1">
+                          <span className="text-[11px] text-white/55 block mt-0.5 line-clamp-1">
                             {site.description}
                           </span>
                         </div>
-                        <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-text-secondary uppercase">
+                        <span className="text-[9px] font-mono px-1.5 py-0.5 rounded-md bg-white/[0.07] text-accent/90 uppercase border border-white/10">
                           {site.status}
                         </span>
                       </a>
@@ -242,8 +241,10 @@ export default function Navbar() {
 
             {/* Start Project Liquid Button */}
             <a
-              href="#contact"
-              className="px-5 py-2 rounded-full text-xs font-medium bg-text-primary text-bg hover:bg-accent hover:text-bg transition-all duration-300 shadow-md hover:shadow-[0_0_20px_rgba(0,240,255,0.3)] flex items-center gap-1.5 font-mono"
+              href="https://order.f0undrteam.site/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-1.5 rounded-full text-[13px] font-semibold tracking-tight bg-gradient-to-b from-white to-white/90 text-bg hover:from-accent hover:to-cyan-300 transition-all duration-300 shadow-[0_2px_14px_rgba(255,255,255,0.18),inset_0_1px_0_#ffffff] hover:shadow-[0_0_22px_rgba(0,240,255,0.45)] flex items-center gap-1"
             >
               <span>start project</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -307,9 +308,11 @@ export default function Navbar() {
 
             <div className="pt-3 border-t border-white/10 flex flex-col gap-2 mt-1">
               <a
-                href="#contact"
+                href="https://order.f0undrteam.site/"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center px-4 py-2.5 rounded-2xl text-xs font-mono font-semibold bg-text-primary text-bg hover:bg-accent hover:text-bg transition-standard flex items-center justify-center gap-1.5"
+                className="w-full text-center px-4 py-2.5 rounded-2xl text-xs font-semibold bg-gradient-to-b from-white to-white/90 text-bg hover:from-accent hover:to-cyan-300 transition-standard flex items-center justify-center gap-1.5"
               >
                 <span>start project</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />

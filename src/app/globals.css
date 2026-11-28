@@ -66,41 +66,57 @@ body {
 
 /* Liquid glass dynamic utilities */
 .liquid-glass {
-  background: rgba(14, 17, 24, 0.68);
-  backdrop-filter: blur(28px) saturate(200%);
-  -webkit-backdrop-filter: blur(28px) saturate(200%);
-  box-shadow: 
-    0 20px 40px -15px rgba(0, 0, 0, 0.7),
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.22),
-    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.03) 45%,
+    rgba(0, 240, 255, 0.03) 100%
+  );
+  backdrop-filter: blur(24px) saturate(190%) brightness(1.06);
+  -webkit-backdrop-filter: blur(24px) saturate(190%) brightness(1.06);
+  box-shadow:
+    0 16px 40px -12px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(255, 255, 255, 0.14),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.06);
 }
 
 .liquid-glass-scrolled {
-  background: rgba(9, 11, 16, 0.85);
-  backdrop-filter: blur(34px) saturate(220%);
-  -webkit-backdrop-filter: blur(34px) saturate(220%);
-  box-shadow: 
-    0 25px 50px -12px rgba(0, 0, 0, 0.85),
-    0 0 25px -4px rgba(0, 240, 255, 0.18),
-    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.32),
-    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(0, 240, 255, 0.3);
+  background: linear-gradient(
+    135deg,
+    rgba(16, 20, 28, 0.72) 0%,
+    rgba(10, 13, 19, 0.65) 55%,
+    rgba(0, 240, 255, 0.06) 100%
+  );
+  backdrop-filter: blur(32px) saturate(210%) brightness(1.08);
+  -webkit-backdrop-filter: blur(32px) saturate(210%) brightness(1.08);
+  box-shadow:
+    0 20px 48px -12px rgba(0, 0, 0, 0.8),
+    0 0 28px -6px rgba(0, 240, 255, 0.16),
+    0 0 0 1px rgba(255, 255, 255, 0.18),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 0 rgba(0, 240, 255, 0.12);
 }
 
 .liquid-pill {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: inset 0 1px 0.5px rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
 }
 
 .liquid-pill-active {
-  background: rgba(0, 240, 255, 0.12);
-  border-color: rgba(0, 240, 255, 0.4);
-  box-shadow: 
-    0 0 14px rgba(0, 240, 255, 0.22),
-    inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 240, 255, 0.16) 0%,
+    rgba(0, 240, 255, 0.07) 100%
+  );
+  box-shadow:
+    0 0 16px rgba(0, 240, 255, 0.2),
+    0 0 0 1px rgba(0, 240, 255, 0.45),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
   color: var(--color-accent);
 }
 
