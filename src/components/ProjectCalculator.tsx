@@ -189,10 +189,12 @@ export default function ProjectCalculator() {
             </div>
 
             <a
-              href={`#contact?scope=${selectedServices.join(',')}&tier=${scale}`}
+              href="https://order.f0undrteam.site/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full py-3 rounded-xl bg-text-primary text-bg font-medium text-xs hover:bg-accent hover:text-bg transition-standard flex items-center justify-center gap-2"
             >
-              <span>request proposal for this scope</span>
+              <span>commission this scope on order portal</span>
               <ArrowRight className="w-4 h-4" />
             </a>
 

@@ -34,17 +34,19 @@ export default function Hero() {
         {/* Hero actions */}
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a
-            href="#contact"
-            className="px-6 py-3.5 rounded-full text-sm font-medium bg-text-primary text-bg hover:bg-accent hover:text-bg transition-standard flex items-center gap-2 font-mono"
+            href="https://order.f0undrteam.site/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3.5 rounded-full text-sm font-semibold bg-accent text-bg hover:bg-white hover:text-black transition-all duration-300 shadow-lg hover:shadow-[0_0_25px_rgba(0,240,255,0.4)] flex items-center gap-2 font-mono"
           >
-            <span>initiate project</span>
+            <span>commission order</span>
             <ArrowUpRight className="w-4 h-4" />
           </a>
           <a
-            href="#capabilities"
+            href="#contact"
             className="px-6 py-3.5 rounded-full text-sm font-medium border border-border-subtle bg-bg-card text-text-primary hover:border-border-strong hover:bg-bg-hover transition-standard font-mono"
           >
-            view capabilities
+            direct contact hub
           </a>
           <a
             href="#work"

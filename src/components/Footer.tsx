@@ -112,27 +112,46 @@ export default function Footer() {
           {/* Direct Col */}
           <div>
             <span className="text-xs font-mono text-text-primary block mb-3 lowercase">
-              connect
+              direct contact
             </span>
             <ul className="space-y-2 text-xs text-text-secondary">
               <li>
-                <a href="mailto:huzaifa.f0undr@gmail.com" className="hover:text-accent transition-standard">
+                <a 
+                  href="https://order.f0undrteam.site/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-accent hover:underline flex items-center gap-1 font-mono"
+                >
+                  <span>order portal</span>
+                  <span>↗</span>
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://wa.me/923446789261" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-emerald-400 transition-standard flex items-center gap-1 font-mono"
+                >
+                  <span>whatsapp (+92 344 6789261)</span>
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="tel:+923446789261" 
+                  className="hover:text-accent transition-standard flex items-center gap-1 font-mono"
+                >
+                  <span>call (+92 344 6789261)</span>
+                </a>
+              </li>
+              <li>
+                <span className="text-text-muted font-mono block">
+                  discord: <span className="text-text-primary">king_huzaifa001</span>
+                </span>
+              </li>
+              <li>
+                <a href="mailto:huzaifa.f0undr@gmail.com" className="hover:text-accent transition-standard font-mono">
                   huzaifa.f0undr@gmail.com
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-standard">
-                  github
-                </a>
-              </li>
-              <li>
-                <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-standard">
-                  x (twitter)
-                </a>
-              </li>
-              <li>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-standard">
-                  linkedin
                 </a>
               </li>
             </ul>
