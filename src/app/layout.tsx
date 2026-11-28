@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: '%s | f0undr',
   },
   description:
-    'Commission custom software, cross-platform apps, 2D/3D games, cinematic video ads, and autonomous AI systems. Directed by M. Huzaifa at f0undr.',
+    'Custom Software · Mobile Apps · 2D/3D Games · Cinematic Video Ads · Autonomous AI Systems · Anti-Bot Scrapers · REA Security. Commission bespoke engineering by f0undr. Directed by M. Huzaifa.',
   keywords: [
     'f0undr',
     'f0undr team',
