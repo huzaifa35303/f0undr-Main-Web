@@ -125,14 +125,20 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-standard">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 pointer-events-none ${
+        isScrolled
+          ? 'bg-gradient-to-b from-bg/95 via-bg/60 to-transparent'
+          : 'bg-transparent'
+      }`}
+    >
       <div
         className={`max-w-container mx-auto px-4 sm:px-6 transition-all duration-300 ${
           isScrolled ? 'py-2.5 sm:py-3' : 'py-4 sm:py-5'
         }`}
       >
         <div
-          className={`relative rounded-full px-4 sm:px-6 py-2 flex items-center justify-between transition-all duration-300 ${
+          className={`pointer-events-auto relative rounded-full px-4 sm:px-6 py-2 flex items-center justify-between transition-all duration-300 ${
             isScrolled ? 'liquid-glass-scrolled' : 'liquid-glass'
           }`}
         >

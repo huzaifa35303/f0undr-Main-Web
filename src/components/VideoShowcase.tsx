@@ -1,12 +1,20 @@
 'use client';
 
-import React, { useRef, useState } from 'react';
-import { Play, Pause, Volume2, VolumeX, Maximize2, Sparkles, Film } from 'lucide-react';
+import React, { useRef, useState, useEffect } from 'react';
+import { Play, Pause, Volume2, VolumeX, Maximize2, Film } from 'lucide-react';
 
 export default function VideoShowcase() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {
+        setIsPlaying(false);
+      });
+    }
+  }, []);
 
   const togglePlay = () => {
     if (!videoRef.current) return;
@@ -50,17 +58,33 @@ export default function VideoShowcase() {
           </div>
 
           {/* Video Container */}
-          <div className="relative rounded-2xl overflow-hidden bg-black aspect-video group">
+          <div className="relative rounded-2xl overflow-hidden bg-bg-card aspect-video group">
             <video
               ref={videoRef}
               src="/videos/ad-showcase.mp4"
+              poster="/images/posters/poster-lays-studio.jpg"
+              preload="auto"
               className="w-full h-full object-cover cursor-pointer"
               autoPlay
               loop
               muted={isMuted}
               playsInline
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
               onClick={togglePlay}
             />
+
+            {/* Center Play Button when paused */}
+            {!isPlaying && (
+              <button
+                type="button"
+                onClick={togglePlay}
+                aria-label="Play showcase video"
+                className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-accent/90 text-bg flex items-center justify-center shadow-[0_0_30px_rgba(0,240,255,0.5)] hover:scale-105 transition-transform z-10"
+              >
+                <Play className="w-7 h-7 ml-1 fill-current" />
+              </button>
+            )}
 
             {/* Video Overlay Controls */}
             <div className="absolute inset-0 bg-gradient-to-t from-bg/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-standard pointer-events-none flex flex-col justify-end p-4 sm:p-6">
