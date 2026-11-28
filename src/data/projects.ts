@@ -46,6 +46,7 @@ export const PROJECTS: CaseStudy[] = [
       'Manual regulatory compliance verification across multi-source documents caused multi-day bottlenecks and inconsistent audit trails.',
     solution:
       'Architected a deterministic 5-agent swarm orchestrated over FastAPI and MCP servers with pgvector retrieval, strict schema validation, and a live trace visualizer.',
+    image: '/images/work/ai-agents.jpg',
     deliverables: [
       'Multi-Agent Dispatcher',
       'Custom MCP Connectors',
@@ -69,6 +70,7 @@ export const PROJECTS: CaseStudy[] = [
       'Electron-based media tools consumed excessive RAM and suffered audio buffer jitter during live multi-track DSP processing.',
     solution:
       'Built a Rust-backed Tauri shell paired with a native C++ DSP audio core and Metal/DirectX GPU rendering, reducing memory footprint by 70% while maintaining sub-5ms latency.',
+    image: '/images/work/desktop-suite.jpg',
     deliverables: [
       'Windows MSIX & macOS DMG',
       'C++ Audio DSP Core',
@@ -92,6 +94,7 @@ export const PROJECTS: CaseStudy[] = [
       'Deliver console-grade stylized volumetric lighting and responsive vehicle physics that run smoothly both natively and inside a browser sandbox.',
     solution:
       'Developed custom compute shaders and rigid-body suspension physics in Godot 4, compiling cleanly to native binaries and WebAssembly for instant browser playtesting.',
+    image: '/images/work/game-prototype.jpg',
     deliverables: [
       'Godot Engine Core',
       'Custom HLSL Shaders',

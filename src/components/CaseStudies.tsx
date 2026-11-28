@@ -50,7 +50,7 @@ export default function CaseStudies() {
                       className="w-full h-full object-cover group-hover:scale-[1.02] transition-standard duration-300"
                     />
                     <div className="absolute top-2 right-2 px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-bg-card/90 text-accent border border-border-subtle">
-                      commercial key visual
+                      {project.id === 'cine-ad' ? 'commercial key visual' : 'system visual'}
                     </div>
                   </div>
                 )}
