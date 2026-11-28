@@ -130,10 +130,10 @@ export default function TermsPage() {
               7. Business Details &amp; Jurisdiction
             </h2>
             <div className="text-xs font-mono space-y-1 text-text-secondary">
-              <p><strong className="text-text-primary">Operating Agency:</strong> f0undr Team &amp; Agency</p>
-              <p><strong className="text-text-primary">Contact Email:</strong> <a href="mailto:huzaifa.f0undr@gmail.com" className="text-accent underline">huzaifa.f0undr@gmail.com</a></p>
-              <p><strong className="text-text-primary">Primary Domain:</strong> <a href="https://ai.f0undrteam.site/" target="_blank" rel="noopener noreferrer" className="text-accent underline">f0undrteam.site</a></p>
-              <p><strong className="text-text-primary">Governing Law:</strong> Standard international commercial contracts, milestone arbitration protocols.</p>
+              <p><strong className="text-text-primary">Operating Agency:</strong> f0undr Studio (Directed by M. Huzaifa)</p>
+              <p><strong className="text-text-primary">Contact Email:</strong> <a href="mailto:hello@f0undrteam.site?cc=huzaifa.f0undr@gmail.com" className="text-accent underline">hello@f0undrteam.site</a> / <a href="mailto:huzaifa.f0undr@gmail.com" className="text-accent underline">huzaifa.f0undr@gmail.com</a></p>
+              <p><strong className="text-text-primary">Primary Domain:</strong> <a href="https://f0undrteam.site/" target="_blank" rel="noopener noreferrer" className="text-accent underline">f0undrteam.site</a></p>
+              <p><strong className="text-text-primary">Governing Law:</strong> Governed by the laws of the Islamic Republic of Pakistan and resolved via binding International Commercial Arbitration where applicable.</p>
             </div>
           </section>
 

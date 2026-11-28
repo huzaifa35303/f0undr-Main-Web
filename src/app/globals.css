@@ -28,6 +28,11 @@
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+section[id],
+div[id] {
+  scroll-margin-top: 6.5rem;
+}
+
 /* Hallmark Floor Rule 4: overflow-x: clip on both html and body. Never hidden, never 100vw. */
 html,
 body {

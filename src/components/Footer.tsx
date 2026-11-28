@@ -102,7 +102,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#work" className="hover:text-accent transition-standard">
+                <a href="#architecture" className="hover:text-accent transition-standard">
                   open-seo infrastructure
                 </a>
               </li>
@@ -150,7 +150,10 @@ export default function Footer() {
                 </span>
               </li>
               <li>
-                <a href="mailto:huzaifa.f0undr@gmail.com" className="hover:text-accent transition-standard font-mono">
+                <a href="mailto:hello@f0undrteam.site?cc=huzaifa.f0undr@gmail.com" className="hover:text-accent transition-standard font-mono block">
+                  hello@f0undrteam.site
+                </a>
+                <a href="mailto:huzaifa.f0undr@gmail.com" className="text-[11px] text-text-muted hover:text-accent transition-standard font-mono block mt-0.5">
                   huzaifa.f0undr@gmail.com
                 </a>
               </li>
@@ -162,7 +165,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-text-muted">
           <div>
-            &copy; {new Date().getFullYear()} f0undr agency. all rights reserved.
+            &copy; {new Date().getFullYear()} f0undr Agency. All rights reserved.
           </div>
           <div className="flex flex-wrap items-center gap-6">
             <Link href="/privacy" className="hover:text-accent transition-standard">

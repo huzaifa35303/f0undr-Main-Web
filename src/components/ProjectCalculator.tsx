@@ -48,7 +48,8 @@ export default function ProjectCalculator() {
   );
 
   return (
-    <section id="calculator" className="py-24 px-6 border-t border-border-subtle">
+    <section id="estimator" className="py-24 px-6 border-t border-border-subtle">
+      <span id="calculator" className="sr-only" aria-hidden="true" />
       <div className="max-w-container mx-auto">
         <div className="mb-14">
           <span className="text-xs font-mono text-accent lowercase">interactive scope planner</span>

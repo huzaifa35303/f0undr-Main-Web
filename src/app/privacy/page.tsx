@@ -41,7 +41,11 @@ export default function PrivacyPage() {
               <span>1. Data We Collect &amp; Purpose</span>
             </h2>
             <p className="mb-3">
-              We strictly enforce <strong>data minimization</strong>. We only collect information you voluntarily provide through our project intake forms:
+              We strictly enforce <strong>data minimization</strong>. This main agency site has zero tracking forms; we only receive information you voluntarily share through our dedicated{' '}
+              <a href="https://order.f0undrteam.site/" target="_blank" rel="noopener noreferrer" className="text-accent underline">
+                f0undr Order Portal
+              </a>{' '}
+              or direct channels (WhatsApp, Discord, Email, Phone):
             </p>
             <ul className="list-disc list-inside space-y-1 text-xs text-text-primary font-mono mb-3">
               <li>Contact details: Name, business email address, company name</li>

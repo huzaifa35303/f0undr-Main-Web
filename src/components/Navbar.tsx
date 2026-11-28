@@ -28,39 +28,31 @@ const NETWORK_SITES: NetworkSite[] = [
     description: 'Autonomous LLM workflows, custom agent swarms & MCP tooling.',
     href: 'https://ai.f0undrteam.site/',
     isExternal: true,
-    status: 'online',
+    status: 'live',
   },
   {
-    title: 'f0undr Creative Studio',
-    category: 'commercial media',
-    description: '4K cinema video ads, 3D motion graphics & poster campaigns.',
-    href: '#work',
+    title: 'Capabilities & Systems',
+    category: 'engineering studio',
+    description: 'Full-stack apps, Cipher7 security, 2D/3D game engines & REA audits.',
+    href: '/capabilities',
     isExternal: false,
-    status: 'active',
+    status: 'page',
   },
   {
-    title: 'Cipher7 Vault',
-    category: 'security & desktop',
-    description: 'Ultra-private desktop & mobile encrypted communications suite.',
-    href: '#capabilities',
+    title: 'Selected Commercial Works',
+    category: 'portfolio & media',
+    description: '4K cinema video ads, commercial posters & verified software case studies.',
+    href: '/work',
     isExternal: false,
-    status: 'deployed',
+    status: 'page',
   },
   {
-    title: 'f0undr Game Labs',
-    category: 'gaming & simulations',
-    description: 'Real-time 2D/3D game mechanics, volumetric shaders & engines.',
-    href: '#capabilities',
+    title: 'Direct Contact Hub',
+    category: 'client dispatch',
+    description: 'WhatsApp, Discord, phone call, and email dispatch.',
+    href: '/contact',
     isExternal: false,
-    status: 'active',
-  },
-  {
-    title: 'f0undr REA Security',
-    category: 'deep tech',
-    description: 'Binary reverse engineering, protocol audits & memory analysis.',
-    href: '#capabilities',
-    isExternal: false,
-    status: 'verified',
+    status: 'page',
   },
 ];
 
@@ -77,7 +69,7 @@ export default function Navbar() {
     { label: 'ai agents', href: '#agents' },
     { label: 'work', href: '#work' },
     { label: 'architecture', href: '#architecture' },
-    { label: 'estimator', href: '#calculator' },
+    { label: 'estimator', href: '#estimator' },
   ];
 
   useEffect(() => {
@@ -91,7 +83,7 @@ export default function Navbar() {
         setScrollProgress(progress);
       }
 
-      const sections = ['capabilities', 'agents', 'work', 'architecture', 'calculator'];
+      const sections = ['capabilities', 'agents', 'work', 'architecture', 'estimator'];
       const scrollPos = scrollY + 200;
       for (const section of sections) {
         const el = document.getElementById(section);
@@ -257,20 +249,20 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile hamburger */}
+          {/* Mobile / Tablet hamburger */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-text-secondary hover:text-text-primary p-2 rounded-xl liquid-pill focus:outline-none"
+            className="lg:hidden text-text-secondary hover:text-text-primary p-2 rounded-xl liquid-pill focus:outline-none"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
 
-        {/* Mobile dropdown menu with Liquid Glassy Panel */}
+        {/* Mobile / Tablet dropdown menu with Liquid Glassy Panel */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-2.5 liquid-glass-scrolled rounded-3xl p-6 flex flex-col gap-3 shadow-2xl border-accent/25 animate-in fade-in slide-in-from-top-3 duration-200">
+          <div className="lg:hidden mt-2.5 liquid-glass-scrolled rounded-3xl p-6 flex flex-col gap-3 shadow-2xl border-accent/25 animate-in fade-in slide-in-from-top-3 duration-200">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href;
               return (

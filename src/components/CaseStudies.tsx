@@ -1,51 +1,7 @@
 import React from 'react';
-import { ExternalLink, Play, Code2, Bot, Layers, ShieldCheck } from 'lucide-react';
-
-interface CaseStudy {
-  id: string;
-  tag: string;
-  title: string;
-  summary: string;
-  image?: string;
-  deliverables: string[];
-  stack: string[];
-}
-
-const PROJECTS: CaseStudy[] = [
-  {
-    id: 'cine-ad',
-    tag: 'creative ads & video',
-    title: 'Commercial Key Visual & Ad Production Suite',
-    summary: 'Crafted 4K commercial video cutdowns, studio lighting setups, and key visual poster suites for broadcast, social ads, and retail point-of-sale.',
-    image: '/images/posters/poster-lays-studio.jpg',
-    deliverables: ['4K Cinema Trailer', 'Studio Lighting Master', 'Billboard Key Visuals', 'Social Cutdowns'],
-    stack: ['Cinema 4D', 'DaVinci Resolve', 'Commercial Food Styling', 'Color Grading'],
-  },
-  {
-    id: 'ai-agents',
-    tag: 'autonomous agents',
-    title: 'Autonomous Research & Decision Fleet',
-    summary: 'Designed a fleet of 5 coordinated AI agents connected through Model Context Protocol (MCP) to automate regulatory compliance and data intake.',
-    deliverables: ['Multi-Agent Dispatcher', 'Custom MCP Connectors', 'Deterministic Guardrails', 'Trace Visualizer'],
-    stack: ['Python', 'FastAPI', 'Claude SDK', 'PostgreSQL pgvector'],
-  },
-  {
-    id: 'desktop-suite',
-    tag: 'cross-platform software',
-    title: 'Strata Studio: Desktop Audio & Media Suite',
-    summary: 'Engineered a native cross-platform application for Windows and macOS with sub-5ms audio processing latency and hardware GPU acceleration.',
-    deliverables: ['Windows MSIX & macOS DMG', 'C++ Audio DSP Core', 'Hardware Accelerated UI', 'Offline SQLite Sync'],
-    stack: ['Tauri', 'Rust', 'Next.js UI', 'Metal / DirectX'],
-  },
-  {
-    id: 'game-prototype',
-    tag: 'game development',
-    title: 'VoxelDrift: Interactive Stylized Simulator',
-    summary: 'Built an interactive physics-driven simulator with custom volumetric shaders, dynamic camera rigs, and cross-platform controller support.',
-    deliverables: ['Godot Engine Core', 'Custom HLSL Shaders', 'WebAssembly Browser Build', 'Steam-Ready Packaging'],
-    stack: ['Godot 4', 'GDScript', 'Compute Shaders', 'Wasm'],
-  },
-];
+import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
+import { PROJECTS } from '@/data/projects';
 
 export default function CaseStudies() {
   return (
@@ -65,17 +21,19 @@ export default function CaseStudies() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {PROJECTS.map((project) => (
-            <div
+            <Link
               key={project.id}
-              className="glass-panel rounded-2xl p-8 flex flex-col justify-between hover:border-accent/40 transition-standard group"
+              href={`/work/${project.id}`}
+              className="glass-panel rounded-2xl p-8 flex flex-col justify-between hover:border-accent/40 transition-standard group cursor-pointer"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span className="px-3 py-1 rounded-full text-xs font-mono bg-accent-subtle text-accent lowercase">
                     {project.tag}
                   </span>
-                  <span className="text-xs font-mono text-text-muted">
-                    verified build
+                  <span className="text-xs font-mono text-text-muted group-hover:text-accent transition-standard flex items-center gap-1">
+                    <span>view case study</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
                   </span>
                 </div>
 
@@ -116,22 +74,24 @@ export default function CaseStudies() {
                 </div>
               </div>
 
-              <div className="pt-6 border-t border-border-subtle">
-                <span className="text-[11px] font-mono text-text-muted block mb-2 lowercase">
-                  technology stack:
-                </span>
-                <div className="flex flex-wrap gap-1.5">
-                  {project.stack.map((item) => (
-                    <span
-                      key={item}
-                      className="px-2.5 py-1 rounded-md bg-tag-bg text-[10px] font-mono text-tag-text"
-                    >
-                      {item}
-                    </span>
-                  ))}
+              <div className="pt-6 border-t border-border-subtle flex items-center justify-between gap-4">
+                <div>
+                  <span className="text-[11px] font-mono text-text-muted block mb-2 lowercase">
+                    architecture &amp; stack:
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {project.stack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-tag-bg text-tag-text border border-border-subtle"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

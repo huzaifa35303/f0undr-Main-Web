@@ -53,7 +53,7 @@ export default function VideoShowcase() {
             </div>
             <div className="flex items-center gap-2 text-text-muted">
               <span className="w-2 h-2 rounded-full bg-accent animate-ping" />
-              <span>4k h.264 // 60fps</span>
+              <span>4K H.264 // 60fps</span>
             </div>
           </div>
 

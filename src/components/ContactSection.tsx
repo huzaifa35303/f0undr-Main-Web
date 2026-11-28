@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Phone, MessageCircle, ArrowUpRight, Copy, Check, ExternalLink, ShieldCheck, Zap } from 'lucide-react';
+import { Phone, MessageCircle, ArrowUpRight, Copy, Check, ExternalLink, Zap, Mail } from 'lucide-react';
 
 export default function ContactSection() {
   const [copiedDiscord, setCopiedDiscord] = useState(false);
@@ -106,7 +106,7 @@ export default function ContactSection() {
                     +92 344 6789261
                   </p>
                   <span className="text-[11px] text-text-muted mt-2 block">
-                    Direct chat with lead architect M.Huzaifa
+                    Direct chat with lead architect M. Huzaifa
                   </span>
                 </div>
               </div>
@@ -185,6 +185,33 @@ export default function ContactSection() {
                 Add <strong>king_huzaifa001</strong> on Discord for developer-to-developer communications
               </span>
             </div>
+
+            {/* Email Card */}
+            <a
+              href="mailto:hello@f0undrteam.site?cc=huzaifa.f0undr@gmail.com"
+              className="glass-panel p-6 rounded-2xl border-border-subtle hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 group flex items-start justify-between"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent shrink-0">
+                  <Mail className="w-6 h-6" />
+                </div>
+                <div>
+                  <span className="text-[11px] font-mono text-accent uppercase tracking-wider block">
+                    official inbox
+                  </span>
+                  <h4 className="text-lg font-bold text-text-primary group-hover:text-accent transition-standard">
+                    Email Dispatch
+                  </h4>
+                  <p className="text-xs text-text-secondary mt-1 font-mono">
+                    hello@f0undrteam.site
+                  </p>
+                  <span className="text-[11px] text-text-muted mt-2 block font-mono">
+                    Direct backup: huzaifa.f0undr@gmail.com
+                  </span>
+                </div>
+              </div>
+              <ArrowUpRight className="w-4 h-4 text-text-muted group-hover:text-accent transition-standard shrink-0" />
+            </a>
 
           </div>
 
