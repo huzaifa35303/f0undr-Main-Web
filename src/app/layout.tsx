@@ -5,27 +5,27 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL('https://f0undrteam.site'),
   title: {
-    default: 'f0undr — Creative Production, Deep-Tech & AI Systems Agency',
+    default: 'f0undr | Bespoke Software, Games & Creative Studio',
     template: '%s | f0undr',
   },
   description:
-    'f0undr builds high-impact advertising, 4K video campaigns, custom software, cross-platform apps, games, and autonomous AI agent systems for forward-thinking brands.',
+    'Commission custom software, cross-platform apps, 2D/3D games, cinematic video ads, and autonomous AI systems. Directed by M. Huzaifa at f0undr.',
   keywords: [
     'f0undr',
     'f0undr team',
     'f0undr agency',
-    'AI agency',
-    'custom software development',
-    'AI agents',
-    'video production and ads',
-    'cross-platform apps',
-    'game development',
-    'Next.js development',
-    'deep tech engineering',
+    'f0undr studio',
+    'bespoke software development',
+    'custom mobile apps',
+    'game development studio',
+    'cinematic video advertising',
+    'autonomous AI systems',
+    'M. Huzaifa',
   ],
-  authors: [{ name: 'f0undr Core Team', url: 'https://f0undrteam.site' }],
+  authors: [{ name: 'M. Huzaifa — f0undr Core', url: 'https://f0undrteam.site' }],
   creator: 'f0undr',
   publisher: 'f0undr Global',
+  applicationName: 'f0undr',
   alternates: {
     canonical: 'https://f0undrteam.site',
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
       { url: '/icon.svg', type: 'image/svg+xml' },
-      { url: '/icon.png', sizes: '256x256', type: 'image/png' },
+      { url: '/icon.png', sizes: '512x512', type: 'image/png' },
     ],
     shortcut: '/favicon.ico',
     apple: '/apple-touch-icon.png',
@@ -42,24 +42,24 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://f0undrteam.site',
-    title: 'f0undr — Creative Production, Deep-Tech & AI Systems Agency',
-    description:
-      'We engineer software, build games, and forge AI agents. And we make the high-converting ads that launch them to the world.',
     siteName: 'f0undr',
+    title: 'f0undr | Bespoke Software, Games & Creative Studio',
+    description:
+      'Commission custom software, cross-platform apps, 2D/3D games, cinematic video ads, and autonomous AI systems. Directed by M. Huzaifa.',
     images: [
       {
         url: '/og-image.svg',
         width: 1200,
         height: 630,
-        alt: 'f0undr Agency — Creative, Tech & AI Systems',
+        alt: 'f0undr — Bespoke Software, Games & Creative Studio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'f0undr — Creative Production, Deep-Tech & AI Systems Agency',
+    title: 'f0undr | Bespoke Software, Games & Creative Studio',
     description:
-      'Software engineering, cross-platform apps, games, custom AI agents, and viral media campaigns.',
+      'Commission custom software, cross-platform apps, 2D/3D games, cinematic video ads, and autonomous AI systems.',
     creator: '@f0undr',
     images: ['/og-image.svg'],
   },
@@ -84,40 +84,45 @@ export default function RootLayout({
   const structuredData = {
     '@context': 'https://schema.org',
     '@graph': [
-      // 1. Google Search Site Name & Sitelinks SearchBox
+      // 1. Google Search Site Name & Identity
       {
         '@type': 'WebSite',
         '@id': 'https://f0undrteam.site/#website',
         url: 'https://f0undrteam.site',
         name: 'f0undr',
         alternateName: [
+          'f0undr Studio',
           'f0undr Team',
-          'founder team',
-          'f0undrteam',
           'f0undr Agency',
-          'f0undr Global',
+          'f0undrteam',
         ],
         description:
-          'Creative production, deep-tech software engineering, and autonomous AI systems.',
+          'Bespoke software engineering, cross-platform applications, 2D/3D game development, and cinematic commercial advertising.',
         publisher: {
           '@id': 'https://f0undrteam.site/#organization',
         },
       },
 
-      // 2. Organization Schema with Logo for Search Favicon & Knowledge Graph
+      // 2. Organization Schema for Favicon & Knowledge Graph
       {
         '@type': 'Organization',
         '@id': 'https://f0undrteam.site/#organization',
         name: 'f0undr',
+        legalName: 'f0undr Studio',
         url: 'https://f0undrteam.site',
         logo: {
           '@type': 'ImageObject',
           url: 'https://f0undrteam.site/icon.png',
-          width: '256',
-          height: '256',
+          width: 512,
+          height: 512,
         },
         image: 'https://f0undrteam.site/og-image.svg',
         email: 'huzaifa.f0undr@gmail.com',
+        telephone: '+923446789261',
+        founder: {
+          '@type': 'Person',
+          name: 'M. Huzaifa',
+        },
         sameAs: [
           'https://order.f0undrteam.site/',
           'https://ai.f0undrteam.site/',
@@ -142,32 +147,24 @@ export default function RootLayout({
             position: 2,
             name: 'Capabilities & Services',
             description:
-              'Full-spectrum engineering: 4K cinema video ads, commercial poster suites, custom software, and cross-platform apps.',
-            url: 'https://f0undrteam.site/#capabilities',
-          },
-          {
-            '@type': 'SiteNavigationElement',
-            position: 2,
-            name: 'Autonomous AI Agents',
-            description:
-              'Production-ready autonomous agent fleets, MCP tooling, and neural architecture pipelines.',
-            url: 'https://f0undrteam.site/#agents',
+              'Custom software, cross-platform mobile/desktop apps, 2D/3D game engines, and commercial advertising.',
+            url: 'https://f0undrteam.site/capabilities',
           },
           {
             '@type': 'SiteNavigationElement',
             position: 3,
             name: 'Selected Works & Case Studies',
             description:
-              'Live commercial video advertisements, FMCG product packaging campaigns, and deep-tech security architectures.',
-            url: 'https://f0undrteam.site/#work',
+              'Commercial video advertisements, FMCG product packaging campaigns, and deep-tech security architectures.',
+            url: 'https://f0undrteam.site/work',
           },
           {
             '@type': 'SiteNavigationElement',
             position: 4,
-            name: 'Interactive Scope Estimator',
+            name: 'Direct Contact Hub',
             description:
-              'Configure deliverables, select service modules, and calculate transparent milestone timelines with zero hidden fees.',
-            url: 'https://f0undrteam.site/#calculator',
+              'Direct project dispatch via WhatsApp (+92 344 6789261), Discord (king_huzaifa001), and phone call.',
+            url: 'https://f0undrteam.site/contact',
           },
           {
             '@type': 'SiteNavigationElement',
@@ -177,14 +174,6 @@ export default function RootLayout({
               'Direct access to our live autonomous intelligence workflows and agent orchestration platform.',
             url: 'https://ai.f0undrteam.site/',
           },
-          {
-            '@type': 'SiteNavigationElement',
-            position: 6,
-            name: 'Project Intake Terminal',
-            description:
-              'Transmit your project brief directly to our engineering and creative leads with guaranteed 24h response.',
-            url: 'https://f0undrteam.site/#contact',
-          },
         ],
       },
 
@@ -192,21 +181,19 @@ export default function RootLayout({
       {
         '@type': 'ProfessionalService',
         '@id': 'https://f0undrteam.site/#service',
-        name: 'f0undr Agency',
+        name: 'f0undr Studio',
         url: 'https://f0undrteam.site',
         image: 'https://f0undrteam.site/og-image.svg',
-        description:
-          'Full-spectrum creative production, software engineering, mobile/desktop app development, and custom autonomous AI systems.',
-        serviceType: [
-          'Custom AI Agent Engineering',
-          'Software & Web Application Development',
-          'Mobile & Desktop App Development',
-          'Video Production & Advertising Campaigns',
-          'Game Development',
-          'Reverse Engineering & Security Analysis',
-        ],
-        areaServed: 'Worldwide',
+        telephone: '+923446789261',
         priceRange: '$$$$',
+        address: {
+          '@type': 'PostalAddress',
+          addressCountry: 'Worldwide',
+        },
+        founder: {
+          '@type': 'Person',
+          name: 'M. Huzaifa',
+        },
       },
     ],
   };
@@ -214,6 +201,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <head>
+        <meta name="application-name" content="f0undr" />
+        <meta name="apple-mobile-web-app-title" content="f0undr" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
