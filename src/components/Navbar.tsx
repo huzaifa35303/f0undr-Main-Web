@@ -31,6 +31,14 @@ const NETWORK_SITES: NetworkSite[] = [
     status: 'live',
   },
   {
+    title: 'f0undr ShareIdeas',
+    category: 'community & specs',
+    description: 'Public idea board for product concepts, specs & open collaboration.',
+    href: 'https://shareideas.f0undrteam.site/',
+    isExternal: true,
+    status: 'live',
+  },
+  {
     title: 'Capabilities & Systems',
     category: 'engineering studio',
     description: 'Full-stack apps, Cipher7 security, 2D/3D game engines & REA audits.',

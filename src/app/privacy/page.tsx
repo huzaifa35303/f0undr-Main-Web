@@ -92,7 +92,7 @@ export default function PrivacyPage() {
                 <span className="text-xs text-text-muted">Send a one-sentence deletion request to our legal team.</span>
               </div>
               <a
-                href="mailto:huzaifa.f0undr@gmail.com?subject=Request%20Data%20Deletion"
+                href="mailto:hello@f0undrteam.site?cc=huzaifa.f0undr@gmail.com&subject=Request%20Data%20Deletion"
                 className="px-4 py-2 rounded-lg bg-text-primary text-bg font-mono text-xs hover:bg-accent transition-standard shrink-0 text-center"
               >
                 request deletion
@@ -112,7 +112,7 @@ export default function PrivacyPage() {
             <p className="text-xs">
               <strong>Operational Contact:</strong><br />
               f0undr Agency Global<br />
-              Direct Contact: <a href="mailto:huzaifa.f0undr@gmail.com" className="text-accent underline font-mono">huzaifa.f0undr@gmail.com</a>
+              Direct Contact: <a href="mailto:hello@f0undrteam.site?cc=huzaifa.f0undr@gmail.com" className="text-accent underline font-mono">hello@f0undrteam.site</a>
             </p>
           </section>
         </div>

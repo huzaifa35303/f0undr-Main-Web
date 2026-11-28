@@ -26,12 +26,12 @@ const POSTERS: PosterItem[] = [
   },
   {
     id: 'poster-2',
-    title: 'High-Contrast Studio Pedestal Master',
-    category: 'commercial ad // studio darkroom',
-    imageSrc: '/images/posters/poster-lays-studio.jpg',
-    alt: "Commercial studio advertisement poster featuring Lay's tomato flavor canister on pedestal with dramatic crimson lighting",
-    treatment: 'High-contrast directional rim lighting, deep crimson atmospheric background, floating ingredient splash, hero pedestal elevation.',
-    specs: ['OOH Billboard Display', 'Cinema Pre-Roll Visual', 'Digital Display Ads', 'Full Bleed 300 DPI'],
+    title: 'Obsidian Hardware Studio Pedestal Master',
+    category: 'consumer tech // studio darkroom',
+    imageSrc: '/images/posters/poster-audio-studio.jpg',
+    alt: 'Commercial studio advertisement poster featuring matte-black and brushed-titanium wireless studio headphones on an obsidian pedestal with cyan rim lighting',
+    treatment: 'Precision cyan rim lighting, matte-black obsidian pedestal elevation, volumetric acoustic particle accents.',
+    specs: ['OOH Billboard Display', 'Launch Keynote Visual', 'Digital Display Ads', 'Full Bleed 300 DPI'],
   },
 ];
 

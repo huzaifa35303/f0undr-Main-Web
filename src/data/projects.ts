@@ -22,7 +22,7 @@ export const PROJECTS: CaseStudy[] = [
       'Produce a unified commercial campaign across 4K video spots, retail point-of-sale prints, and social cutdowns with zero visual degradation across aspect ratios.',
     solution:
       'Engineered an end-to-end physical and 3D lighting pipeline in Cinema 4D and DaVinci Resolve, delivering simultaneous 16:9 broadcast masters, 9:16 vertical cuts, and 300 DPI full-bleed print assets.',
-    image: '/images/posters/poster-lays-studio.jpg',
+    image: '/images/posters/poster-audio-studio.jpg',
     deliverables: [
       '4K Cinema Trailer',
       'Studio Lighting Master',

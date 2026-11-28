@@ -53,6 +53,17 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a 
+                  href="https://shareideas.f0undrteam.site/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-accent hover:underline inline-flex items-center gap-1 font-mono"
+                >
+                  <span>f0undr shareideas (live)</span>
+                  <span>↗</span>
+                </a>
+              </li>
+              <li>
                 <a href="#capabilities" className="hover:text-accent transition-standard">
                   video ads & posters
                 </a>
@@ -153,9 +164,6 @@ export default function Footer() {
                 <a href="mailto:hello@f0undrteam.site?cc=huzaifa.f0undr@gmail.com" className="hover:text-accent transition-standard font-mono block">
                   hello@f0undrteam.site
                 </a>
-                <a href="mailto:huzaifa.f0undr@gmail.com" className="text-[11px] text-text-muted hover:text-accent transition-standard font-mono block mt-0.5">
-                  huzaifa.f0undr@gmail.com
-                </a>
               </li>
               <li className="pt-1 flex items-center gap-3">
                 <a
@@ -199,7 +207,7 @@ export default function Footer() {
             <Link href="/cookie-policy" className="hover:text-accent transition-standard">
               cookie policy
             </Link>
-            <a href="mailto:huzaifa.f0undr@gmail.com?subject=Data%20Deletion%20Request" className="hover:text-accent transition-standard">
+            <a href="mailto:hello@f0undrteam.site?cc=huzaifa.f0undr@gmail.com&subject=Data%20Deletion%20Request" className="hover:text-accent transition-standard">
               request data deletion
             </a>
           </div>

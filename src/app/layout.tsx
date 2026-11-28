@@ -117,7 +117,7 @@ export default function RootLayout({
           height: 512,
         },
         image: 'https://f0undrteam.site/og-image.svg',
-        email: 'huzaifa.f0undr@gmail.com',
+        email: 'hello@f0undrteam.site',
         telephone: '+923446789261',
         founder: {
           '@type': 'Person',
@@ -126,6 +126,7 @@ export default function RootLayout({
         sameAs: [
           'https://order.f0undrteam.site/',
           'https://ai.f0undrteam.site/',
+          'https://shareideas.f0undrteam.site/',
           'https://www.instagram.com/huzaifa.f0undr/?hl=en',
           'https://www.facebook.com/profile.php?id=61596779771244',
           'https://github.com/huzaifa35303/f0undr-Main-Web',
